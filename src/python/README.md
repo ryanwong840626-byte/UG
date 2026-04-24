@@ -5,6 +5,7 @@
 - `nx_session_report.py`: opens the NX Listing Window and reports the current session, work part, display part, units, and body count
 - `nx_create_point.py`: creates a visible point in the current work part at a fixed coordinate
 - `nx_create_datum_plane.py`: creates a fixed datum plane at the part origin
+- `nx_lens_mold_asphere_points.py`: reads an asphere JSON config and creates sampled meridian points in NX
 
 ## How to run
 
@@ -19,6 +20,7 @@
 - `../tools/run_nx_create_point.ps1`
 - `../tools/run_nx_create_datum_plane.ps1`
 - `../tools/run_nx_batch_update.ps1`
+- `../tools/run_nx_lens_mold_asphere_points.ps1`
 
 These launchers call `run_journal.exe` directly from PowerShell so you can test examples with fewer manual steps.
 
@@ -40,6 +42,10 @@ Batch process all `.prt` files in a folder:
 
 `powershell -ExecutionPolicy Bypass -File .\run_nx_batch_update.ps1 -FolderPath C:\path\to\parts -Operation point -SaveChanges`
 
+Generate asphere meridian sample points from a config file:
+
+`powershell -ExecutionPolicy Bypass -File .\run_nx_lens_mold_asphere_points.ps1 -PartPath C:\path\to\lens.prt -ConfigPath ..\configs\lens_mold_asphere_sample.json -SaveChanges`
+
 ## Why this is the first example
 
 This script is intentionally simple. It verifies that:
@@ -54,3 +60,4 @@ This script is intentionally simple. It verifies that:
 - export part metadata
 - batch-read part files
 - parameterize geometry values from command line input
+- build spline and surface features from lens configuration input

@@ -2,15 +2,15 @@
 
 ## Next
 
-- Add actual UG/NX project materials
-- Record target workflow and technical requirements
-- Verify which UG / NX automation path is preferred: CLI, journal, Python, or .NET
-- Add a fourth example that exports part metadata or processes multiple parts
-- Add command line parameters for geometry inputs such as coordinates and origins
+- Fill the lens mold requirements template with actual production parameters
+- Validate the asphere JSON workflow on a dedicated lens mold part
+- Upgrade sampled points into spline and surface creation
+- Define the first CAM automation target for mold finishing
+- Confirm tool library and machine constraints
 
 ## In Progress
 
-- Validate the first practical UG / NX Python examples inside NX
+- Build the first lens mold-specific NX automation workflow
 
 ## Done
 
@@ -24,3 +24,6 @@
 - Second NX Open Python example for point creation added
 - Third NX Open Python example for datum plane creation added
 - Batch folder processing launcher added
+- Lens mold implementation roadmap added
+- Lens mold parameter template added
+- First asphere point-generation workflow added
