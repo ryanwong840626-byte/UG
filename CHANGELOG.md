@@ -12,3 +12,4 @@
 - Added a third NX Open Python example that creates a datum plane in the work part
 - Added batch launchers and part-path based command line automation flow
 - Added lens mold planning docs and first asphere point-generation workflow
+- Added first asphere spline-generation workflow for lens mold geometry

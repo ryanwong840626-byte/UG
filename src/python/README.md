@@ -6,6 +6,7 @@
 - `nx_create_point.py`: creates a visible point in the current work part at a fixed coordinate
 - `nx_create_datum_plane.py`: creates a fixed datum plane at the part origin
 - `nx_lens_mold_asphere_points.py`: reads an asphere JSON config and creates sampled meridian points in NX
+- `nx_lens_mold_asphere_spline.py`: reads an asphere JSON config, creates reference points, and attempts to build a meridian spline
 
 ## How to run
 
@@ -21,6 +22,7 @@
 - `../tools/run_nx_create_datum_plane.ps1`
 - `../tools/run_nx_batch_update.ps1`
 - `../tools/run_nx_lens_mold_asphere_points.ps1`
+- `../tools/run_nx_lens_mold_asphere_spline.ps1`
 
 These launchers call `run_journal.exe` directly from PowerShell so you can test examples with fewer manual steps.
 
@@ -45,6 +47,10 @@ Batch process all `.prt` files in a folder:
 Generate asphere meridian sample points from a config file:
 
 `powershell -ExecutionPolicy Bypass -File .\run_nx_lens_mold_asphere_points.ps1 -PartPath C:\path\to\lens.prt -ConfigPath ..\configs\lens_mold_asphere_sample.json -SaveChanges`
+
+Generate an asphere meridian spline from a config file:
+
+`powershell -ExecutionPolicy Bypass -File .\run_nx_lens_mold_asphere_spline.ps1 -PartPath C:\path\to\lens.prt -ConfigPath ..\configs\lens_mold_asphere_sample.json -SaveChanges`
 
 ## Why this is the first example
 

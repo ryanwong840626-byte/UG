@@ -4,7 +4,8 @@
 
 - Fill the lens mold requirements template with actual production parameters
 - Validate the asphere JSON workflow on a dedicated lens mold part
-- Upgrade sampled points into spline and surface creation
+- Validate sampled points to spline creation in NX
+- Upgrade spline into revolved or fitted optical surface creation
 - Define the first CAM automation target for mold finishing
 - Confirm tool library and machine constraints
 
@@ -27,3 +28,4 @@
 - Lens mold implementation roadmap added
 - Lens mold parameter template added
 - First asphere point-generation workflow added
+- First asphere spline-generation workflow added
