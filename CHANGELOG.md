@@ -7,3 +7,4 @@
 - Added base project documentation structure
 - Added source directory scaffold and initial NX Python template
 - Expanded project context and task tracking notes
+- Replaced the placeholder with a first NX Open Python session report example
