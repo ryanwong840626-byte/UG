@@ -6,3 +6,4 @@ This folder can store helper scripts for:
 - file conversion
 - batch execution helpers
 - UG / NX environment setup assistance
+- PowerShell launchers for NX Python examples

@@ -12,6 +12,13 @@
 3. Run the script from the NX journal or automation entry that supports Python.
 4. Check the Listing Window and message box for the result.
 
+## Optional launcher scripts
+
+- `../tools/run_nx_session_report.ps1`
+- `../tools/run_nx_create_point.ps1`
+
+These launchers call `run_journal.exe` directly from PowerShell so you can test examples with fewer manual steps.
+
 ## Why this is the first example
 
 This script is intentionally simple. It verifies that:
