@@ -7,7 +7,7 @@ param(
 
 $nxRoot = "C:\Program Files\Siemens\DesigncenterXNX2512"
 $runJournal = Join-Path $nxRoot "NXBIN\run_journal.exe"
-$scriptPath = Join-Path $PSScriptRoot "..\python\nx_create_point.py"
+$scriptPath = Join-Path $PSScriptRoot "..\python\nx_create_datum_plane.py"
 
 if (-not (Test-Path $runJournal)) {
     Write-Error "Cannot find run_journal.exe at $runJournal"
@@ -17,7 +17,7 @@ if (-not (Test-Path $runJournal)) {
 $resolvedPartPath = (Resolve-Path $PartPath).Path
 $resolvedScriptPath = (Resolve-Path $scriptPath).Path
 
-Write-Host "Launching NX create point script..."
+Write-Host "Launching NX create datum plane script..."
 Write-Host "Journal runner: $runJournal"
 Write-Host "Script: $resolvedScriptPath"
 Write-Host "Target part: $resolvedPartPath"

@@ -7,6 +7,8 @@ working before building more advanced automation.
 
 import NXOpen
 
+from nx_batch_utils import get_target_part_path, open_target_part
+
 
 def write_line(listing_window, text):
     listing_window.WriteLine(str(text))
@@ -24,8 +26,6 @@ def get_part_label(part):
 def main():
     session = NXOpen.Session.GetSession()
     ui = NXOpen.UI.GetUI()
-    work_part = session.Parts.Work
-    display_part = session.Parts.Display
 
     mark_id = session.SetUndoMark(
         NXOpen.Session.MarkVisibility.Visible,
@@ -36,6 +36,16 @@ def main():
     listing_window.Open()
 
     write_line(listing_window, "=== NX Session Report ===")
+    target_path = get_target_part_path()
+    if target_path:
+        write_line(listing_window, f"Requested target part: {target_path}")
+
+    work_part, opened_path = open_target_part(session, listing_window)
+    display_part = session.Parts.Display
+
+    if opened_path:
+        write_line(listing_window, f"Opened in batch mode: {opened_path}")
+
     write_line(listing_window, f"Work part: {get_part_label(work_part)}")
     write_line(listing_window, f"Display part: {get_part_label(display_part)}")
 
@@ -44,7 +54,7 @@ def main():
         ui.NXMessageBox.Show(
             "NX Python Example",
             NXOpen.NXMessageBox.DialogType.Warning,
-            "Script ran, but no work part is loaded.",
+            "Script ran, but no work part is loaded. Pass NX_TARGET_PRT or open a part in NX.",
         )
         return
 
