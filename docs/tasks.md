@@ -4,11 +4,12 @@
 
 - Add actual UG/NX project materials
 - Record target workflow and technical requirements
-- Decide whether follow-up automation will use CLI, scripts, or plugin development
+- Verify which UG / NX automation path is preferred: CLI, journal, Python, or .NET
+- Add first real script or sample workflow into `src/`
 
 ## In Progress
 
-- Repository foundation setup
+- Define the first practical UG / NX use case
 
 ## Done
 
@@ -16,3 +17,5 @@
 - Repository initialized
 - GitHub remote connected
 - First push completed
+- Base documentation scaffold added
+- Source directory scaffold added
