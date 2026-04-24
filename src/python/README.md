@@ -3,6 +3,7 @@
 ## Current example
 
 - `nx_session_report.py`: opens the NX Listing Window and reports the current session, work part, display part, units, and body count
+- `nx_create_point.py`: creates a visible point in the current work part at a fixed coordinate
 
 ## How to run
 
@@ -22,6 +23,6 @@ This script is intentionally simple. It verifies that:
 
 ## Next examples to add
 
-- create a point or datum feature
+- create a datum feature
 - export part metadata
 - batch-read part files
