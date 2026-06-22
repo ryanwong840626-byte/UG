@@ -7,6 +7,7 @@
 - `nx_create_datum_plane.py`: creates a fixed datum plane at the part origin
 - `nx_lens_mold_asphere_points.py`: reads an asphere JSON config and creates sampled meridian points in NX
 - `nx_lens_mold_asphere_spline.py`: reads an asphere JSON config, creates reference points, and attempts to build a meridian spline
+- `nc_single_station.py`: converts a legacy NC file into single-station local tool samples for UG collision preview
 
 ## How to run
 
@@ -23,6 +24,7 @@
 - `../tools/run_nx_batch_update.ps1`
 - `../tools/run_nx_lens_mold_asphere_points.ps1`
 - `../tools/run_nx_lens_mold_asphere_spline.ps1`
+- `../tools/prepare_single_station_samples.ps1`
 
 These launchers call `run_journal.exe` directly from PowerShell so you can test examples with fewer manual steps.
 
@@ -52,6 +54,10 @@ Generate an asphere meridian spline from a config file:
 
 `powershell -ExecutionPolicy Bypass -File .\run_nx_lens_mold_asphere_spline.ps1 -PartPath C:\path\to\lens.prt -ConfigPath ..\configs\lens_mold_asphere_sample.json -SaveChanges`
 
+Prepare single-station tool samples from the current roughing NC:
+
+`powershell -ExecutionPolicy Bypass -File .\prepare_single_station_samples.ps1 -NcPath C:\path\to\data_30F.nc`
+
 ## Why this is the first example
 
 This script is intentionally simple. It verifies that:
@@ -67,3 +73,4 @@ This script is intentionally simple. It verifies that:
 - batch-read part files
 - parameterize geometry values from command line input
 - build spline and surface features from lens configuration input
+- upgrade the single-station collision preview into an NC-driven clearance check

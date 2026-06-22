@@ -13,3 +13,6 @@
 - Added batch launchers and part-path based command line automation flow
 - Added lens mold planning docs and first asphere point-generation workflow
 - Added first asphere spline-generation workflow for lens mold geometry
+- Added single-station NC preprocessing for roughing collision review
+- Added the first simplified UG single-station collision preview Journal
+- Documented the corrected single-fixture, single-workpiece, single-head machine assumption
